@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запис на навчальний курс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="header">
+            <img class="logo" src="images/logo.png" alt="Логотип курсу" width="64" height="64">
+            <h1>Запис на курс «Веб-розробка»</h1>
+        </div>
+        <p class="intro">Заповніть анкету, і ми зв'яжемося з вами для підтвердження місця в групі.</p>
+
+        <form action="#" method="POST">
+
+            <fieldset>
+                <legend>Особисті дані</legend>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstname">Ім'я:*</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Іван" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname">Прізвище:*</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Іваненко" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Електронна пошта:*</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+380 XX XXX XX XX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Дата народження:*</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="group-title">Стать:</span>
+                        <div class="choice-row">
+                            <label for="gender-m"><input type="radio" id="gender-m" name="gender" value="male"> Чоловіча</label>
+                            <label for="gender-f"><input type="radio" id="gender-f" name="gender" value="female"> Жіноча</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Параметри навчання</legend>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="course">Напрям курсу:*</label>
+                        <select id="course" name="course" required>
+                            <option value="">— Оберіть напрям —</option>
+                            <option value="html">HTML і CSS</option>
+                            <option value="js">JavaScript</option>
+                            <option value="design">Веб-дизайн</option>
+                            <option value="backend">Серверна розробка</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="level">Початковий рівень:</label>
+                        <select id="level" name="level">
+                            <option value="beginner">Початківець</option>
+                            <option value="medium">Середній</option>
+                            <option value="advanced">Просунутий</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="group-title">Формат навчання:*</span>
+                        <div class="choice-row">
+                            <label for="format-online"><input type="radio" id="format-online" name="format" value="online" required> Онлайн</label>
+                            <label for="format-offline"><input type="radio" id="format-offline" name="format" value="offline"> Офлайн</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="startdate">Бажана дата початку:</label>
+                        <input type="date" id="startdate" name="startdate">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <span class="group-title">Зручні дні занять:</span>
+                        <div class="choice-row">
+                            <label for="day-mon"><input type="checkbox" id="day-mon" name="days" value="mon"> Пн</label>
+                            <label for="day-tue"><input type="checkbox" id="day-tue" name="days" value="tue"> Вт</label>
+                            <label for="day-wed"><input type="checkbox" id="day-wed" name="days" value="wed"> Ср</label>
+                            <label for="day-thu"><input type="checkbox" id="day-thu" name="days" value="thu"> Чт</label>
+                            <label for="day-fri"><input type="checkbox" id="day-fri" name="days" value="fri"> Пт</label>
+                            <label for="day-sat"><input type="checkbox" id="day-sat" name="days" value="sat"> Сб</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="motivation">Чому ви хочете пройти цей курс?*</label>
+                        <textarea id="motivation" name="motivation" rows="4"
+                        placeholder="Розкажіть про свої цілі та очікування..." required></textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="agree-row">
+                <label for="agree">
+                    <input type="checkbox" id="agree" name="agree" required> Я погоджуюся з умовами навчання та обробкою персональних даних*
+                </label>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="btn btn-submit">Надіслати заявку</button>
+                <button type="reset" class="btn btn-reset">Очистити форму</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
